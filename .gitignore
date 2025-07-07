@@ -1,0 +1,24 @@
+# Amiga system files
+*.info
+*.bak
+*.tmp
+
+# AMOS files
+*.AMOS.bak
+*.abk
+
+# Blitz Basic files
+*.bb2.bak
+*.blitz.bak
+
+# General temp files
+*~
+*.swp
+
+# Compiled files (optional - du kanske vill ha med dem?)
+*.exe
+*.o
+
+# OS specific
+.DS_Store
+Thumbs.db
