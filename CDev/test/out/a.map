@@ -1,0 +1,496 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .data          0x00000000        0x0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.strlen   0x00000000       0x18 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.memcpy   0x00000000       0x88 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.memmove  0x00000000       0xae C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .comment       0x00000000       0x13 C:\Users\GARE~1\AppData\Local\Temp\ccfs0QOk.debug.temp.o
+ .comment       0x00000000       0x13 C:\Users\GARE~1\AppData\Local\Temp\cc4n0Isq.debug.temp.o
+ .text          0x00000000        0x0 obj/gcc8_a_support.o
+ .data          0x00000000        0x0 obj/gcc8_a_support.o
+ .bss           0x00000000        0x0 obj/gcc8_a_support.o
+ .text.__divsi3
+                0x00000000       0x2e obj/gcc8_a_support.o
+ .text.__modsi3
+                0x00000000       0x2e obj/gcc8_a_support.o
+ .text          0x00000000        0x0 obj/depacker_doynax.o
+ .data          0x00000000        0x0 obj/depacker_doynax.o
+ .bss           0x00000000        0x0 obj/depacker_doynax.o
+ .text.depacker_doynax
+                0x00000000       0xd2 obj/depacker_doynax.o
+ .debug_line    0x00000000       0xc2 obj/depacker_doynax.o
+ .debug_info    0x00000000       0x35 obj/depacker_doynax.o
+ .debug_abbrev  0x00000000       0x21 obj/depacker_doynax.o
+ .debug_aranges
+                0x00000000       0x20 obj/depacker_doynax.o
+ .debug_str     0x00000000       0x99 obj/depacker_doynax.o
+ .text.depacker_doynax_vasm
+                0x00000000       0xd2 obj/depacker_doynax_vasm.o
+ .debug_aranges
+                0x00000000       0x20 obj/depacker_doynax_vasm.o
+ .debug_info    0x00000000       0xa4 obj/depacker_doynax_vasm.o
+ .debug_abbrev  0x00000000       0x12 obj/depacker_doynax_vasm.o
+ .debug_ranges  0x00000000       0x18 obj/depacker_doynax_vasm.o
+ .debug_line    0x00000000       0xdc obj/depacker_doynax_vasm.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0x0
+LOAD C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+LOAD C:\Users\GARE~1\AppData\Local\Temp\ccfs0QOk.debug.temp.o
+LOAD C:\Users\GARE~1\AppData\Local\Temp\cc4n0Isq.debug.temp.o
+LOAD obj/gcc8_a_support.o
+LOAD obj/depacker_doynax.o
+LOAD obj/depacker_doynax_vasm.o
+                [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x80000000))
+                0x80000074                        . = (SEGMENT_START ("text-segment", 0x80000000) + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rela.dyn       0x80000074        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                        PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end = .)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000     0x14e2
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ .text.unlikely
+                0x00000000       0x8c C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+                0x00000000                _start
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup.main
+                0x0000008c      0xdac C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+                0x0000008c                main
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text.interruptHandler
+                0x00000e38       0x6e C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.debug_cmd.part.0
+                0x00000ea6       0x20 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.WaitVbl  0x00000ec6       0xba C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.KPrintF  0x00000f80       0x72 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.warpmode
+                0x00000ff2      0x15c C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.debug_register_bitmap.constprop.0
+                0x0000114e       0xd0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.debug_register_copperlist.constprop.0
+                0x0000121e       0x9a C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .text.memset   0x000012b8      0x16c C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+                0x000012b8                memset
+ .text.__mulsi3
+                0x00001424       0x22 obj/gcc8_a_support.o
+                0x00001424                __mulsi3
+ .text.__udivsi3
+                0x00001446       0x5c obj/gcc8_a_support.o
+                0x00001446                __udivsi3
+ .text.__umodsi3
+                0x000014a2       0x2e obj/gcc8_a_support.o
+                0x000014a2                __umodsi3
+ .text.KPutCharX
+                0x000014d0        0xe obj/gcc8_a_support.o
+                0x000014d0                KPutCharX
+ .text.PutChar  0x000014de        0x4 obj/gcc8_a_support.o
+                0x000014de                PutChar
+ *(.gnu.warning)
+
+.fini
+ *(SORT_NONE(.fini))
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.rodata         0x000014e2     0x1bca
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000014e2     0x1b17 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+                0x000014e2                incbin_colors_start
+                0x00001522                incbin_colors_end
+                0x00001524                incbin_player_start
+                0x00002e8a                incbin_player_end
+ .rodata.sinus40
+                0x00002ff9       0x40 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .rodata.sinus32
+                0x00003039       0x33 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .rodata.sinus15
+                0x0000306c       0x40 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+
+.MEMF_CHIP      0x000030ac       0x80
+ .MEMF_CHIP     0x000030ac       0x80 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.sframe
+ *(.sframe)
+ *(.sframe.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.note.build-id
+ *(.note.build-id)
+
+.note.GNU-stack
+ *(.note.GNU-stack)
+
+.note.gnu-property
+ *(.note.gnu-property)
+
+.note.ABI-tag
+ *(.note.ABI-tag)
+
+.note.package
+ *(.note.package)
+
+.note.dlopen
+ *(.note.dlopen)
+
+.note.netbsd.ident
+ *(.note.netbsd.ident)
+
+.note.openbsd.ident
+ *(.note.openbsd.ident)
+                0x0000512c                        . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.sframe
+ *(.sframe)
+ *(.sframe.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.tdata          0x0000512c        0x0
+                [!provide]                        PROVIDE (__tdata_start = .)
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000512c        0x0
+                0x0000512c                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x0000512c                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000512c        0x0
+                0x0000512c                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                0x0000512c                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000512c        0x0
+                0x0000512c                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                0x0000512c                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic
+ *(.dynamic)
+                0x0000512c                        . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data
+ *(.data .data.* .gnu.linkonce.d.*)
+
+.INCBIN.MEMF_CHIP
+                0x0000512c     0xeb7d
+ .INCBIN.MEMF_CHIP
+                0x0000512c     0xeb7d C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+                0x0000512c                incbin_image_start
+                0x0001192c                incbin_image_end
+                0x0001192e                incbin_bob_start
+                0x0001282e                incbin_bob_end
+                0x00012830                incbin_module_start
+                0x00013ca8                incbin_module_end
+
+.data1
+ *(.data1)
+                0x00013ca9                        _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x00013ca9                        . = ALIGN (ALIGNOF (NEXT_SECTION))
+                0x00013caa                        __bss_start = .
+
+.bss            0x00013caa       0x2a
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss.ActiView  0x00013caa        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.SystemADKCON
+                0x00013cae        0x2 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.SystemDMA
+                0x00013cb0        0x2 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.SystemInts
+                0x00013cb2        0x2 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.SystemIrq
+                0x00013cb4        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.VBR       0x00013cb8        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.DOSBase   0x00013cbc        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.GfxBase   0x00013cc0        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.SysBase   0x00013cc4        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.frameCounter
+                0x00013cc8        0x2 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.scroll    0x00013cca        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .bss.custom    0x00013cce        0x4 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ *(COMMON)
+                0x00013cd4                        . = ALIGN ((. != 0x0)?0x4:0x1)
+ *fill*         0x00013cd2        0x2 
+                0x00013cd4                        . = ALIGN (0x4)
+                0x00013cd4                        . = SEGMENT_START ("ldata-segment", .)
+                0x00013cd4                        . = ALIGN (0x4)
+                0x00013cd4                        _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x00013cd4                        . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x12
+ *(.comment)
+ .comment       0x00000000       0x12 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+                                 0x13 (size before relaxing)
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xd0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x80 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .debug_aranges
+                0x00000080       0x50 obj/gcc8_a_support.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x6fe5
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x19f0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .debug_info    0x000019f0     0x4834 C:\Users\GARE~1\AppData\Local\Temp\ccfs0QOk.debug.temp.o
+                0x000019f0                main.c.efef2b2f
+ .debug_info    0x00006224      0xd3c C:\Users\GARE~1\AppData\Local\Temp\cc4n0Isq.debug.temp.o
+                0x00006224                gcc8_c_support.c.d5ab56d1
+ .debug_info    0x00006f60       0x85 obj/gcc8_a_support.o
+
+.debug_abbrev   0x00000000      0x7d2
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1c0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .debug_abbrev  0x000001c0      0x387 C:\Users\GARE~1\AppData\Local\Temp\ccfs0QOk.debug.temp.o
+ .debug_abbrev  0x00000547      0x26c C:\Users\GARE~1\AppData\Local\Temp\cc4n0Isq.debug.temp.o
+ .debug_abbrev  0x000007b3       0x1f obj/gcc8_a_support.o
+
+.debug_line     0x00000000     0x45af
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000     0x3d50 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .debug_line    0x00003d50      0x541 C:\Users\GARE~1\AppData\Local\Temp\ccfs0QOk.debug.temp.o
+ .debug_line    0x00004291      0x1ed C:\Users\GARE~1\AppData\Local\Temp\cc4n0Isq.debug.temp.o
+ .debug_line    0x0000447e      0x131 obj/gcc8_a_support.o
+
+.debug_frame    0x00000000      0x5b8
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x4ec C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .debug_frame   0x000004ec       0xcc obj/gcc8_a_support.o
+
+.debug_str      0x00000000      0x2af
+ *(.debug_str)
+ .debug_str     0x00000000        0x0 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+ .debug_str     0x00000000      0x15e C:\Users\GARE~1\AppData\Local\Temp\ccfs0QOk.debug.temp.o
+ .debug_str     0x0000015e       0x8a C:\Users\GARE~1\AppData\Local\Temp\cc4n0Isq.debug.temp.o
+ .debug_str     0x000001e8       0xc7 obj/gcc8_a_support.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0x48
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x48 obj/gcc8_a_support.o
+
+.debug_addr
+ *(.debug_addr)
+
+.debug_line_str
+ *(.debug_line_str)
+
+.debug_loclists
+                0x00000000     0x1c06
+ *(.debug_loclists)
+ .debug_loclists
+                0x00000000     0x1c06 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_names
+ *(.debug_names)
+
+.debug_rnglists
+                0x00000000      0x4c6
+ *(.debug_rnglists)
+ .debug_rnglists
+                0x00000000      0x4c6 C:\Users\GARE~1\AppData\Local\Temp\ccK35vzH.ltrans0.ltrans.o
+
+.debug_str_offsets
+ *(.debug_str_offsets)
+
+.debug_sup
+ *(.debug_sup)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.gnu_object_only)
+OUTPUT(out/a.elf elf32-m68k)
