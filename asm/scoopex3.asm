@@ -5,8 +5,10 @@ init:
 ***********************
 mainloop:
 wframe:
-	cmp.b #$ff, $dff006
+	cmp.b #$2c,$dff006
 	bne wframe
+	move.w #$000,$dff180
+	
 ;------ frame loop start ----	
 	add d6,d7	;add "1" to y pos
 
