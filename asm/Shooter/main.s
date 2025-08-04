@@ -1,6 +1,10 @@
-;*********************
-; MEin little shooter
-;*********************
+;****************************************************************
+; Amiga Assembly Game Programming Book
+; 
+; Mein Shooter
+;
+;****************************************************************
+
 
 ;****************************************************************
 ; INCLUDES
@@ -8,14 +12,12 @@
           incdir     "include"
           include    "hw.i"
 
-       
+      
 ;****************************************************************
 ; MAIN PROGRAM
 ;****************************************************************
           SECTION    code_section,CODE
 main:
-          nop
-          nop
           jsr        take_system          ; takes the control of Amiga's hardware
     
 mainloop  btst       #6,CIAAPRA           ; left mouse button pressed?

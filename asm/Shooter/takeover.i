@@ -1,16 +1,22 @@
-;***********************************
-; Take CONTROL of the hardware
-;***********************************
-    IFND        TAKEOVER_I
-TAKEOVER_I  SET 1
+;****************************************************************
+; Takes and releases control of Amiga hardware.
+;
+;****************************************************************
 
-;*******************************
-;   CONSTANTS
-;*******************************
+            IFND    TAKEOVER_I
+TAKEOVER_I  SET     1
 
-; DMACON reguster settings
-;enables only copper DMA (bit 7)
-                 ;5432109876543210
-DMASET       equ %1000001010000000 
 
-    ENDC
+
+;****************************************************************
+; CONSTANTS
+;****************************************************************
+
+; DMACON register settings
+; enables only copper DMA (bit 7)
+          ; 5432109876543210
+DMASET equ %1000001010000000 
+
+            ENDC  
+
+  

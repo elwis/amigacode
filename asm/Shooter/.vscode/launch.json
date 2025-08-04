@@ -5,9 +5,9 @@
             "type": "amiga-assembly",
             "request": "launch",
             "name": "WinUAE Debug",
-            "stopOnEntry": true,
-            "program": "${workspaceFolder}/uae/dh0/Shooter",
-            "remoteProgram": "SYS:Shooter",
+            "stopOnEntry": false,
+            "program": "${workspaceFolder}/uae/dh0/chapter6",
+            "remoteProgram": "SYS:chapter6",
             "emulatorType": "winuae",
             "emulatorArgs": [
                 "-s",
@@ -20,8 +20,8 @@
             "request": "launch",
             "name": "FS-UAE Debug",
             "stopOnEntry": true,
-            "program": "${workspaceFolder}/uae/dh0/Shooter",
-            "remoteProgram": "SYS:Shooter",
+            "program": "${workspaceFolder}/uae/dh0/chapter6",
+            "remoteProgram": "SYS:chapter6",
             "emulatorType": "fs-uae",
             "emulatorArgs": [
                 "--hard_drive_0=${workspaceFolder}/uae/dh0",
