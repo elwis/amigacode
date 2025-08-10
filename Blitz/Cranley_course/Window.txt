@@ -1,0 +1,27 @@
+WbToScreen 0
+Window 0, 150, 50, 300, 100, #WFLG_SIZEGADGET|#WFLG_DRAGBAR|#WFLG_DEPTHGADGET|#WFLG_CLOSEGADGET|#WFLG_ACTIVATE, "Hi", 1, 0
+GTButton 0, 0, 10, 10, 260, 20, "Click it", #PLACETEXT_IN
+GTButton 0, 1, 10, 40, 260, 20, "Not me", #PLACETEXT_IN
+AttachGTList 0, 0
+DefaultOutput
+
+quit.b = False
+Repeat
+  ev.l = WaitEvent
+  If ev = #IDCMP_CLOSEWINDOW Then
+    quit = True
+  If ev = #IDCMP_GADGETUP
+    gh.l = GadgetHit
+    If gh = 0 Then
+      NPrint "You did it"
+      NPrint gh
+    If gh = 1 Then
+      NPrint "Lets quit"
+      NPrint gh
+      quit = True
+  End If
+Until quit
+CloseWindow 0
+End
+
+
