@@ -1,0 +1,145 @@
+; XTRA
+; Embedded .xtra Header
+; 
+; General Info
+; -------------------------------------------------------
+; ExePath         = "ram:"
+; ExeFile         = "Empty"
+; CreateIcon      = 0
+; Residents       = "all.res"
+; 
+; Compiler
+; -------------------------------------------------------
+; StringBuffer    = 100000
+; MakeSmallest    = 1
+; FuncOptimize    = 1
+; Version         = 0.0.0
+; NumberOfBuilds  = 26
+; 
+; Debugger
+; -------------------------------------------------------
+; CliArgs         = ""
+; StackSize       = 8192
+; RuntimeDebug    = 1
+; DebugInfo       = 0
+; CreateDbgFile   = 0
+; OverflowCheck   = 0
+; AssemblerCheck  = 0
+; InterruptCheck  = 1
+; AutoRun         = 1
+; 
+; Editor
+; -------------------------------------------------------
+; CursorLine      = 63
+; CursorColumn    = 9
+; LabelSearch     = ""
+; LabelRemark     = 0
+; LabelAll        = 0
+; LabelPosition   = 0
+; 
+; Blitz Objects
+; -------------------------------------------------------
+; Max File        = 100
+; Max GadgetList  = 100
+; Max Shape       = 200
+; Max Bank        = 1
+; Max MenuList    = 100
+; Max GTList      = 100
+; Max Palette     = 4
+; Max BitMap      = 10
+; Max Screen      = 5
+; Max IntuiFont   = 10
+; Max BlitzFont   = 1
+; Max Window      = 100
+; Max IconInfo    = 1
+; Max MUIObject   = 50
+; Max AsyncReq    = 4
+; Max Req-Lib     = 5
+; Max GTMenuList  = 100
+; Max Console     = 5
+; Max TCPSock     = 5
+; Max Tape        = 5
+; Max Sound       = 10
+; Max MedModule   = 8
+; Max Buffer      = 10
+; Max Queue       = 10
+; Max Sprite      = 20
+; Max Module      = 5
+; Max Slice       = 10
+; Max Page        = 4
+; Max CopList     = 10
+; Max PTModule    = 5
+; Max Anim        = 10
+; Max NChunky     = 50
+; Max Chunky      = 20
+; Max Stencil     = 5
+; Max XBSound     = 10
+; /XTRA
+; key press idcmp example program
+;NoCli               ;we do not want to have a console window
+;Screen 0,3          ;open a simple screen
+;ScreensBitMap 0,0   ;pick up it's bitmap
+;DefaultIDCMP $400   ;set 'key press' IDCMP For Window
+
+WbToScreen 0
+Window 0,150,50,320,300,#WFLG_SIZEGADGET|#WFLG_DRAGBAR|#WFLG_DEPTHGADGET|#WFLG_CLOSEGADGET|#WFLG_ACTIVATE,"Mein window",O,1
+
+#gad_button = 0
+#gad_checkbox = 1
+#gad_string = 2
+#gad_cycle = 3
+#gad_radio = 4
+#gad_slider = 5
+#gad_number = 6
+
+
+GTButton 0,#gad_button, 10, 10, 260, 20, "Click this one", #PLACETEXT_IN
+GTCheckBox 0, #gad_checkbox, 10, 40, 20, 20, "Enable magic", #PLACETEXT_RIGHT|$200
+GTString 0, #gad_string, 7, 70, 200, 20, "Name", #PLACETEXT_LEFT, 100, "Steve"
+GTCycle 0, #gad_cycle, 10, 110, 260, 20, "Type", #PLACETEXT_ABOVE, "Miscellaneous|Normal|Amigan"
+GTTags #GTMX_Spacing, 8
+GTMX 0, #gad_radio, 10, 140, 12, 12, "", #PLACETEXT_RIGHT|$200, "None|Computer|Marsian"
+GTNewLookProp On
+GTSlider 0,  #gad_slider, 10, 190, 170, 20, "Tune", #PLACETEXT_BELOW, 0, 20
+GTNumber 0, #gad_number, 190, 190, 80, 20, "Value", #PLACETEXT_BELOW, 0
+
+AttachGTList 0,0
+DefaultOutput
+quit.b = False
+
+Repeat
+  ev.l = WaitEvent
+  If ev = #IDCMP_CLOSEWINDOW Then quit = True
+  If ev = #IDCMP_GADGETUP
+    gh = GadgetHit
+    Select gh
+      Case #gad_button
+        NPrint "The button rules!"
+      Case #gad_checkbox
+        Print "Checkbox: "
+        If GTStatus(0, #gad_checkbox)
+          NPrint "On"
+        Else
+          NPrint "Off"
+        End If
+      Case #gad_string
+        Print "Enter pressed on String: "
+        NPrint GTGetString(0, #gad_string)
+      Case #gad_cycle
+        Print "New Cycle: "
+        choice = GTGetAttrs(0, #gad_cycle, #GTCY_Active)
+        NPrint choice
+      Case #gad_slider
+        Print "Slider moved: "
+        value.l = GTGetAttrs(0, #gad_slider, #GTSL_Level)
+        GTSetInteger 0, #gad_number, value
+        NPrint value
+        GTSetAttrs 0, #gad_cycle, #GTCY_Active, 2
+      Default
+        NPrint "You are being lazy"
+      End Select
+  End If
+Until quit
+
+CloseWindow 0
+End
