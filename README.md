@@ -10,19 +10,17 @@ might dislike the emulators so I'll abandon that one until I get the real hardwa
 
 ## BlitzBasic2
 
-Fun, i found the PDf book by Adam Zalepa and was working my way through that one when I for some reasdo0n decided to try AmiBlitz which ruined my BB2 install. Will probably go back to it later.
-
-## AmiBlitz3
-
-Only looked at it. The first one with what seem to be an always modern IDE. Need some gode guides for that one but will probably try it out some more.
+Fun, i found the PDf book by Adam Zalepa and was working my way through that one when I for some reason decided to try AmiBlitz which ruined my BB2 install. 
+Totally worth it though. AmiBlitz3 and PED is easier for me it seems. Some small things might have changed so doublecheck the Amiblitz guides if you are following BB2 tutorials. 
+Also, be careful when creating executables since Amiblitz may sneak in requirements for FPU. If you really want to target lowend Amigas, BB2 is safer
 
 ## C
 
-Only started this one, had some struggle with vbcc and configuration but from what I remember that's C and there's a reason for make and the build-tools.
+Only started this one so far. I will wait until I got AmigaOS3.2 installed so I can try codecraft, so far I only have Vim. (and yeah, VsCode if I want to work on win/linux)
 
 ## Assembler
 
-Now I'm having fun, although I had to checkout both Asm-Pro and Asm-One cause i didn't understand them and thought something were wrong. I'll stay here for awhile I think
+Now I'm having fun, although I had to checkout both Asm-Pro and Asm-One cause i didn't understand them and thought something were wrong. n00b
 
 [Good books](https://www.retro-commodore.eu/amiga-development/)
 
