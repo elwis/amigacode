@@ -1,0 +1,14 @@
+Screen 1,13, "Lennart"
+Window 1,10,70, 500,80,$9, "Hos Lennart",1,2
+
+Activate 1
+
+MenuTitle 0,0, "Lennarts"
+    MenuItem 0,0,0,0,"Baka"
+    MenuItem 0,0,0,1,"Sussa"
+    MenuItem 0,0,0,2,"Pesa"
+
+SetMenu 0
+MouseWait
+End
+
